@@ -273,7 +273,7 @@ car-position(slidesNumber, number)
 
 		&\&_top
 			position: relative
-			background-image url("/insurance/Assets/img/app_sber/landing/dog_105.jpg")
+			background-image url("../Assets/img/app_sber/landing/dog_105.jpg")
 			background-repeat no-repeat
 			background-size cover
 			background-position 16% center
@@ -394,7 +394,7 @@ car-position(slidesNumber, number)
 				display: none
 			for ind in 1..3
 				&_{ind}
-					background-image: unquote(s('url("/insurance/Assets/img/app_sber/landing/home-shape%s.svg")', ind))
+					background-image: unquote(s('url("../Assets/img/app_sber/landing/home-shape%s.svg")', ind))
 			&_1
 				background-position 30% center
 			&_2
@@ -412,24 +412,24 @@ car-position(slidesNumber, number)
 				&_4-1
 					width: 50%
 					height: 120%
-					background-image: url("/insurance/Assets/img/app_sber/landing/home-shape4.svg")
+					background-image: url("../Assets/img/app_sber/landing/home-shape4.svg")
 					background-position right
 				&_4-2
 					width: 50%
-					background-image: url("/insurance/Assets/img/app_sber/landing/home-shape5.svg")
+					background-image: url("../Assets/img/app_sber/landing/home-shape5.svg")
 					background-position 60px center
 					height: 86%;
 					transform: translateY(-30%) scale(1.1)
 				&_4-3
 					width: 100%
 					transform translateY(-20%)
-					background-image: url("/insurance/Assets/img/app_sber/landing/home-shape6.svg")
+					background-image: url("../Assets/img/app_sber/landing/home-shape6.svg")
 				&_5-1
 					background-size contain
 					background-position right center
 					width: 50%
 					height: 120%
-					background-image: url("/insurance/Assets/img/app_sber/landing/home-shape7.svg")
+					background-image: url("../Assets/img/app_sber/landing/home-shape7.svg")
 					+mwm()
 						background-size contain
 				&_5-2
@@ -438,7 +438,7 @@ car-position(slidesNumber, number)
 					width: 60%
 					height: 95%
 					transform: translate(10%,-15%) scale(1.1)
-					background-image: url("/insurance/Assets/img/app_sber/landing/home-shape5.svg")
+					background-image: url("../Assets/img/app_sber/landing/home-shape5.svg")
 					+mwm()
 						background-size contain
 
@@ -481,7 +481,7 @@ car-position(slidesNumber, number)
 				max-width: 250px;
 				left: calc(55% + 170px);
 				top: 40px;
-				background: url(/insurance/Assets/img/app_sber/landing/home-infinity.png) left top no-repeat;
+				background: url(../Assets/img/app_sber/landing/home-infinity.png) left top no-repeat;
 				transform: translateY(-108%);
 				@media (max-height 660px)
 					display: none

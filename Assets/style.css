@@ -4197,7 +4197,7 @@ p.no-akkaunt {
 }
 .landing-section.landing-section_top {
   position: relative;
-  background-image: url("/insurance/Assets/img/app_sber/landing/dog_105.jpg");
+  background-image: url("../Assets/img/app_sber/landing/dog_105.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 16% center;
@@ -4368,13 +4368,13 @@ p.no-akkaunt {
   }
 }
 .landing-section-picture_1 {
-  background-image: url("/insurance/Assets/img/app_sber/landing/home-shape1.svg");
+  background-image: url("../Assets/img/app_sber/landing/home-shape1.svg");
 }
 .landing-section-picture_2 {
-  background-image: url("/insurance/Assets/img/app_sber/landing/home-shape2.svg");
+  background-image: url("../Assets/img/app_sber/landing/home-shape2.svg");
 }
 .landing-section-picture_3 {
-  background-image: url("/insurance/Assets/img/app_sber/landing/home-shape3.svg");
+  background-image: url("../Assets/img/app_sber/landing/home-shape3.svg");
 }
 .landing-section-picture_1 {
   background-position: 30% center;
@@ -4396,12 +4396,12 @@ p.no-akkaunt {
 .landing-section-picture-part_4-1 {
   width: 50%;
   height: 120%;
-  background-image: url("/insurance/Assets/img/app_sber/landing/home-shape4.svg");
+  background-image: url("../Assets/img/app_sber/landing/home-shape4.svg");
   background-position: right;
 }
 .landing-section-picture-part_4-2 {
   width: 50%;
-  background-image: url("/insurance/Assets/img/app_sber/landing/home-shape5.svg");
+  background-image: url("../Assets/img/app_sber/landing/home-shape5.svg");
   background-position: 60px center;
   height: 86%;
   transform: translateY(-30%) scale(1.1);
@@ -4409,14 +4409,14 @@ p.no-akkaunt {
 .landing-section-picture-part_4-3 {
   width: 100%;
   transform: translateY(-20%);
-  background-image: url("/insurance/Assets/img/app_sber/landing/home-shape6.svg");
+  background-image: url("../Assets/img/app_sber/landing/home-shape6.svg");
 }
 .landing-section-picture-part_5-1 {
   background-size: contain;
   background-position: right center;
   width: 50%;
   height: 120%;
-  background-image: url("/insurance/Assets/img/app_sber/landing/home-shape7.svg");
+  background-image: url("../Assets/img/app_sber/landing/home-shape7.svg");
 }
 @media (min-width: 426px) and (min-height: 500px) {
   .landing-section-picture-part_5-1 {
@@ -4429,7 +4429,7 @@ p.no-akkaunt {
   width: 60%;
   height: 95%;
   transform: translate(10%, -15%) scale(1.1);
-  background-image: url("/insurance/Assets/img/app_sber/landing/home-shape5.svg");
+  background-image: url("../Assets/img/app_sber/landing/home-shape5.svg");
 }
 @media (min-width: 426px) and (min-height: 500px) {
   .landing-section-picture-part_5-2 {
@@ -4501,7 +4501,7 @@ p.no-akkaunt {
   max-width: 250px;
   left: calc(55% + 170px);
   top: 40px;
-  background: url("/insurance/Assets/img/app_sber/landing/home-infinity.png") left top no-repeat;
+  background: url("../Assets/img/app_sber/landing/home-infinity.png") left top no-repeat;
   transform: translateY(-108%);
 }
 @media (max-height: 660px) {

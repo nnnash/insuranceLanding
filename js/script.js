@@ -12,10 +12,6 @@ $(function () {
 	}
 
 	var $video = $('.landing-section-video'),
-		video;
-	//if (device.ios() || device.mobile() || !window.atob) {
-	//	$video.remove();
-	//} else {
 		video = $('video', $video).get(0);
 	enableInlineVideo(video);
 	//}
@@ -39,11 +35,6 @@ $(function () {
 	$('.landing-sections').fullpage({
 		afterLoad: function (anchorLink, index) {
 			if (index === 1) {
-				//intervalRewind = setInterval(function(){
-				//	video.currentTime += 1 / 24;
-				//	if (video.currentTime >= 29) video.currentTime = 0;
-				//	console.log(video.currentTime);
-				//}, 1000 / 24);
 				if (video) video.play();
 			} else {
 				clearInterval(intervalRewind);

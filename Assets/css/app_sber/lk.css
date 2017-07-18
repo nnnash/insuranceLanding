@@ -1,0 +1,612 @@
+#wrap {
+
+}
+
+input[type=text], input[type=number], input[type=email], input[type=password], textarea {
+    height: 38px;
+}
+
+.btn.btn-success {
+    border-radius: 5px;
+}
+
+.nep-content{
+}
+
+.loading{
+    width: 120px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.lk-topbar-container{
+    position: relative;
+    top: -1px;
+}
+
+.lk-topbar{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.lk-topbar span, .lk-topbar a{
+    display: inline-block;
+    padding: 0 15px;
+    margin-right: 20px;
+
+    color: #ffffff;
+    font-size: 14px;
+
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.lk-topbar .lk-topbar-last{
+    float: right;
+    margin-right: 0;
+}
+
+.lk-topbar a.active{
+    background: rgba(255,255,255, 0.2);
+    cursor: default;
+}
+
+.lk-content-wrapper{
+}
+
+.lk-content-container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.lk-breadcrumbs{
+    display: none;
+}
+
+.lk-heading{
+    padding: 0 0;
+}
+
+.lk-heading-parent{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.lk-heading h1{
+    display: inline-block;
+    margin: 0;
+    font-size: 26px;
+    font-weight: 200;
+}
+
+.lk-list-heading{
+    display: none;
+    padding: 20px 20px 10px 20px;
+}
+
+.lk-list-heading:after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.lk-contracts-heading .product{
+    float: left;
+    width: 15%;
+}
+.lk-contracts-heading .company{
+    float: left;
+    width: 25%;
+}
+.lk-contracts-heading .duration{
+    float: left;
+    width: 25%;
+}
+.lk-contracts-heading .cost{
+    float: left;
+    width: 18%;
+}
+
+.lk-calculations-heading .product{
+    float: left;
+    width: 15%;
+}
+.lk-calculations-heading .company{
+    float: left;
+    width: 20%;
+}
+.lk-calculations-heading .date{
+    float: left;
+    width: 15%;
+}
+.lk-calculations-heading .cost{
+    float: left;
+    width: 15%;
+    padding-left: 10px;
+}
+.lk-calculations-heading .details{
+    float: left;
+    width: 15%;
+}
+
+.lk-list-table{
+    list-style: none;
+    margin: 0;
+}
+
+.lk-list-item{
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.lk-condition-group
+{
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.lk-list-item.lk-calculation-item.lk-calculation-inactive,
+.lk-list-item.lk-contract.lk-contract-inactive{
+    color: rgba(203, 203, 203, 0.52);
+}
+
+.lk-contract-company img,
+.lk-calculation-company img{
+    width: auto;
+    max-width: 100%;
+    height: 30px;
+}
+
+.lk-list-item-note{
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px dashed #D6D6D6;
+    color: #ff0000;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.lk-button-default,
+.lk-button-calc{
+    width: 125px;
+    margin-top: 3px;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 5px 20px;
+    border: 1px solid #8fce49;
+    color: #8fce49 !important;
+    border-radius: 5px;
+
+    font-weight: 300;
+}
+
+.lk-button-calc:hover{
+    background-color: #8fce49;
+    color: #ffffff  !important;
+}
+
+.lk-button-default{
+    color: #fff  !important;
+    background-color: #8fce49;
+}
+.lk-button-default:hover{
+    color: #fff  !important;
+    background-color: #a0e550;
+    border: 1px solid #a0e550;
+}
+
+.lk-button-remove{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: url(/Assets/img/modal/close.png) 0% 0%;
+    cursor: pointer;
+    top: 10px;
+}
+
+
+.lk-button-remove:hover{
+    background: url(/Assets/img/modal/close.png) 0% 100%;
+}
+
+.lk-button-remove span{
+    display: none;
+}
+
+.lk-contract-filter-option{
+    display: inline-block;
+    margin-right: 30px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.lk-contract-filter-option.current{
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.lk-contract-files a{
+    position: relative;
+}
+
+.lk-contract-files a span.polis-label{
+    color: #ffffff;
+    border-bottom: 1px #ffffff dashed;
+    margin-left: 5px;
+}
+.lk-contract-files a span.polis-label:hover{
+    color: #ffffff;
+    border-bottom: 1px #ffffff dashed;
+}
+
+.lk-form{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.lk-form fieldset{
+    padding: 25px 40px;
+}
+
+.lk-form legend{
+    font-size: 17px;
+    border: none;
+}
+
+.lk-form-row:after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.lk-row-label{
+    float: left;
+    width: 25%;
+    height: 34px;
+    line-height: 34px;
+    margin-right: 20px;
+    text-align: right;
+
+    font-size: 16px;
+}
+
+.lk-form-content{
+    float: left;
+    line-height: 34px;
+    width: 65%;
+    font-size: 16px;
+}
+
+.lk-form-content .lk-field-inline{
+    width: auto;
+}
+
+.lk-form-content .lk-field-small{
+    width: 170px;
+}
+
+.lk-form-columns .lk-form-row{
+    display: inline-block;
+    width: 49%;
+    height: 47px;
+}
+
+.lk-form-columns .lk-form-row:first-child label{
+    width: 51%;
+}
+
+.lk-form-columns .lk-form-row:first-child .lk-form-content{
+    width: 169px;
+}
+
+.lk-form-columns .lk-form-row:nth-child(2) label{
+    width: 123px;
+}
+
+.lk-form-row .form-control{
+    border-radius: 4px !important;
+}
+
+.datepicker-calendar{
+    height: 34px;
+}
+
+.lk-form-columns{
+    margin-bottom: -7px;
+}
+.lk-about-login {
+    margin-bottom: 12px;
+    color: #4a4a4a;
+}
+.lk-change-pass{
+    color: #4990e2;
+    border-bottom: 1px #4990e2 solid;
+}
+
+.lk-change-pass:hover{
+    color: #3e6bb0;
+    text-decoration: none;
+    border-bottom: 1px #3e6bb0 solid;
+}
+
+
+.lk-save-icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("/Assets/img/new-save-white.png");
+    background-size: 100%;
+    margin-bottom: -4px;
+    margin-right: 8px;
+}
+.lk-mini-text{
+    font-size: 13px;
+    margin-bottom: -3px;
+    color: #4a4a4a;
+}
+
+.lk-label {
+    margin-bottom:0
+}
+
+.form-field-datepicker .datepicker-calendar {
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+    width: 22px;
+    background: url('/Assets/img/app_sber/calendar_icon.png') center no-repeat;
+    background-size: 22px;
+    cursor: pointer;
+}
+.lk-bottom-btns {
+    margin-left: 15%;
+}
+
+.form-field-container_execute .form-field{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.personal-select {
+    margin-bottom: 10px;
+}
+.personal-input{
+    width: 310px !important;
+}
+
+.select-button-container{
+    margin-top: -6px;
+}
+
+.combobox-wrapper{
+    width: 100% !important;
+}
+.combobox-wrapper.has-value .custom-combobox-toggle{
+    margin: 6px auto;
+}
+.combobox-wrapper input[type="text"] {
+    font-size: 20px !important;
+    width: 380px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.combobox-wrapper input[type="text"]:focus {
+    border-bottom: 1px solid #ffffff;
+}
+.combobox-input:focus {
+    border-bottom: 1px solid #ffffff;
+}
+
+.combobox-options{
+    display: none;
+    height: 0;
+}
+
+.combobox-options_opened{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    overflow-y: auto;
+    border: solid 1px rgba(80, 145, 214, 0.8);
+    border-bottom:none;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background: rgba(80, 145, 214, 0.8);
+    margin-top:-6px;
+}
+.bootstrap-maxlength {
+    color: transparent;
+}
+
+.combobox-options_opened li{
+    width: 100%;
+    max-width: none;
+}
+
+.jq-selectbox__select-text {
+    font-size: 20px;
+}
+
+.save-user-result__panel {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+    opacity: 0.9;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    z-index: 10;
+    line-height: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -60px;
+    display: none;
+}
+.icon-success {
+    background: rgba(0, 0, 0, 0) url(/Assets/img/success.png) no-repeat scroll 0 0 / 100% auto;
+    display: inline-block;
+    margin-bottom: -10px;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.icon-close {
+    background: rgba(0, 0, 0, 0) url(/Assets/img/modal/close.png) no-repeat scroll 0 0 / 100% auto;
+    display: inline-block;
+    margin-bottom: -5px;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.save-user-result__close-btn-container {
+    display: inline-table;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.save-user-result__text-container {
+    display: inline-table;
+    line-height: 18px;
+    margin-top: -9px;
+}
+
+#saveUserSuccess {
+    background-color: #17a3d8;
+}
+
+#saveUserError {
+    background-color: #c95656;
+}
+
+.sort{
+    padding-top: 30px;
+}
+
+.sort .mysort{
+    color: #333333;
+    border: 1px #b2b2b2 dashed;
+    border-radius: 5px;
+    padding: 5px 10px;
+    padding-right: 30px;
+    margin: 0 5px;
+}
+
+.sort .mysort.number{
+    padding-right: 25px;
+}
+
+.sort .mysort.active{
+    color: #17a3d8;
+    border: 1px #17a3d8 solid;
+}
+
+.sort .mysort span{
+    position: relative;
+}
+
+.sort .mysort.number span:after{
+    content: "\2193";
+    color: #b2b2b2;
+    position: absolute;
+    top: -2px;
+    left: 5px;
+}
+.sort .mysort.number.active span.down:after{
+    content: "\2193";
+    color: #17a3d8;
+    position: absolute;
+    top: -2px;
+    left: 5px;
+}
+.sort .mysort.number.active span.up:after{
+    content: "\2191";
+    color: #17a3d8;
+    position: absolute;
+    top: -2px;
+    left: 5px;
+}
+.sort .mysort.number.active:hover span.down:after,
+.sort .mysort.number.active span.up:after {
+    color: #00d5ff;
+}
+.sort .mysort.number:hover span:after{
+    content: "\2193";
+    color: #00d5ff;
+    position: absolute;
+    top: -2px;
+    left: 5px;
+}
+
+.sort .mysort span:after{
+    content: "A-Я";
+    color: #b2b2b2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    width: 25px;
+}
+.sort .mysort.active span.down:after{
+    content: "Я-А";
+    color: #17a3d8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    width: 25px;
+}
+.sort .mysort.active span.up:after{
+    content: "А-Я";
+    color: #17a3d8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    width: 25px;
+}
+.sort .mysort:hover span:after{
+    content: "A-Я";
+    color: #00d5ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    width: 25px;
+}
+
+.sort .mysort:hover{
+    color: #00d5ff;
+    border-color: #00d5ff;
+}
+
+.lk-form-content .mobile,
+.mobile,
+.visible-xs{
+    display: none !important;
+}
+
+
+
+.lk-date {
+    width: 263px !important;
+}
+.lk-date:focus {
+    outline: none;
+}

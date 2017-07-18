@@ -1,0 +1,815 @@
+@font-face {
+	font-family: 'PT Rouble';
+	src: url('/Assets/fonts/rubsr-webfont.eot');
+	src: url('/Assets/fonts/rubsr-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/Assets/fonts/rubsr-webfont.woff') format('woff'),
+	url('/Assets/fonts/rubsr-webfont.ttf') format('truetype'),
+	url('/Assets/fonts/rubsr-webfont.svg#PT Rouble') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1.5;
+
+	color: #292b2c;
+	background: #ffffff;
+}
+
+html, body{
+	height: 100%;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: .5rem;
+
+	font-family: 'PT Sans Caption', sans-serif;
+	font-weight: normal;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+	cursor: help;
+}
+
+address {
+	margin-bottom: 1rem;
+	font-style: normal;
+	line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-bottom: .5rem;
+	margin-left: 0;
+}
+
+blockquote {
+	margin: 0 0 1rem;
+}
+
+a{
+	color: #0275d8;
+	text-decoration: none;
+}
+
+a:focus, a:hover {
+	color: #014c8c;
+	text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+	outline: 0;
+}
+
+pre {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	overflow: auto;
+}
+
+figure {
+	margin: 0 0 1rem;
+}
+
+img {
+	vertical-align: middle;
+}
+
+/*
+Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
+
+In particular, unlike most other browsers, IE11+Edge on Windows 10 on touch devices and IE Mobile 10-11
+DON'T remove the click delay when `<meta name="viewport" content="width=device-width">` is present.
+However, they DO support removing the click delay via `touch-action: manipulation`.
+See:
+ * https://v4-alpha.getbootstrap.com/content/reboot/#click-delay-optimization-for-touch
+ * http://caniuse.com/#feat=css-touch-action
+ * https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay
+*/
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+	touch-action: manipulation;
+}
+
+/* Tables */
+table {
+border-collapse: collapse;
+background-color: transparent;
+}
+
+caption {
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	color: #636c72;
+	text-align: left;
+	caption-side: bottom;
+}
+
+th {
+text-align: left;
+}
+
+/*Forms*/
+label {
+	display: inline-block;
+	margin-bottom: .5rem;
+}
+
+/*
+Work around a Firefox/IE bug where the transparent `button` background
+results in a loss of the default `button` focus styles.
+See https://github.com/suitcss/base/
+*/
+/*noinspection CssOverwrittenProperties*/
+button:focus {
+	outline: 1px dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+textarea {
+	line-height: inherit;
+}
+
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled {
+	cursor: not-allowed;
+}
+
+/**
+Remove the default appearance of temporal inputs to avoid a Mobile Safari
+bug where setting a custom line-height prevents text from being vertically
+centered within the input.
+See https://bugs.webkit.org/show_bug.cgi?id=139848 and https://github.com/twbs/bootstrap/issues/11266
+*/
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+	-webkit-appearance: listbox;
+}
+
+textarea {
+	resize: vertical;
+}
+
+/* See https://github.com/twbs/bootstrap/issues/12359 and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements */
+fieldset {
+	min-width: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+legend {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin-bottom: .5rem;
+	font-size: 1.5rem;
+	line-height: inherit;
+}
+
+input[type="search"] {
+	-webkit-appearance: none;
+}
+
+/* Always hide an element with the `hidden` HTML attribute (from PureCSS). */
+[hidden] {
+	display: none !important;
+}
+
+.clearfix:before, .clearfix:after, .container:before, .container:after, .row:before, .row:after {
+	display: table;
+	content: " ";
+}
+
+.clearfix:after, .container:after, .row:after {
+	clear: both;
+}
+
+.text-center{
+	text-align: center;
+}
+
+/* Container */
+.container, .container-fluid, .container-flex{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.flex{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.container-flex{
+	display: flex;
+	min-width: 100%;
+	width: 100%;
+}
+
+@media (min-width: 992px) {
+	.container{
+		width: 960px;
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container{
+		width: 1140px;
+		max-width: 100%;
+	}
+}
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.row:before, .row:after{
+	display: table;
+	content: " ";
+}
+
+.row:after{
+	clear: both;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+.col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+.col-17, .col-175, .col-225, .col-375{
+	width: 100%;
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.col-visible{
+	height: 1px;
+}
+
+.col-1 { width: 8.33333%; }
+.col-2 { width: 16.66667%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33333%; }
+.col-5 { width: 41.66667%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33333%; }
+.col-8 { width: 66.66667%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33333%; }
+.col-11 { width: 91.66667%; }
+.col-12 { width: 100%; }
+
+.col-push-1{ margin-left: 8.33333%;}
+.col-push-2{ margin-left: 16.66667%;}
+.col-push-4{ margin-left: 33.3333%; }
+
+.display-none{
+	display: none !important;
+}
+
+/*Visibility classes from Bootstrap*/
+.visible-xs,
+tr.visible-xs,
+th.visible-xs,
+td.visible-xs {
+	display: none !important;
+}
+@media (max-width: 767px) {
+	.visible-xs {
+		display: block !important;
+	}
+	table.visible-xs {
+		display: table;
+	}
+	tr.visible-xs {
+		display: table-row !important;
+	}
+	th.visible-xs,
+	td.visible-xs {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.visible-xs.visible-sm {
+		display: block !important;
+	}
+	table.visible-xs.visible-sm {
+		display: table;
+	}
+	tr.visible-xs.visible-sm {
+		display: table-row !important;
+	}
+	th.visible-xs.visible-sm,
+	td.visible-xs.visible-sm {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.visible-xs.visible-md {
+		display: block !important;
+	}
+	table.visible-xs.visible-md {
+		display: table;
+	}
+	tr.visible-xs.visible-md {
+		display: table-row !important;
+	}
+	th.visible-xs.visible-md,
+	td.visible-xs.visible-md {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 1200px) {
+	.visible-xs.visible-lg {
+		display: block !important;
+	}
+	table.visible-xs.visible-lg {
+		display: table;
+	}
+	tr.visible-xs.visible-lg {
+		display: table-row !important;
+	}
+	th.visible-xs.visible-lg,
+	td.visible-xs.visible-lg {
+		display: table-cell !important;
+	}
+}
+.visible-sm,
+tr.visible-sm,
+th.visible-sm,
+td.visible-sm {
+	display: none !important;
+}
+@media (max-width: 767px) {
+	.visible-sm.visible-xs {
+		display: block !important;
+	}
+	table.visible-sm.visible-xs {
+		display: table;
+	}
+	tr.visible-sm.visible-xs {
+		display: table-row !important;
+	}
+	th.visible-sm.visible-xs,
+	td.visible-sm.visible-xs {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.visible-sm {
+		display: block !important;
+	}
+	table.visible-sm {
+		display: table;
+	}
+	tr.visible-sm {
+		display: table-row !important;
+	}
+	th.visible-sm,
+	td.visible-sm {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.visible-sm.visible-md {
+		display: block !important;
+	}
+	table.visible-sm.visible-md {
+		display: table;
+	}
+	tr.visible-sm.visible-md {
+		display: table-row !important;
+	}
+	th.visible-sm.visible-md,
+	td.visible-sm.visible-md {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 1200px) {
+	.visible-sm.visible-lg {
+		display: block !important;
+	}
+	table.visible-sm.visible-lg {
+		display: table;
+	}
+	tr.visible-sm.visible-lg {
+		display: table-row !important;
+	}
+	th.visible-sm.visible-lg,
+	td.visible-sm.visible-lg {
+		display: table-cell !important;
+	}
+}
+.visible-md,
+tr.visible-md,
+th.visible-md,
+td.visible-md {
+	display: none !important;
+}
+@media (max-width: 767px) {
+	.visible-md.visible-xs {
+		display: block !important;
+	}
+	table.visible-md.visible-xs {
+		display: table;
+	}
+	tr.visible-md.visible-xs {
+		display: table-row !important;
+	}
+	th.visible-md.visible-xs,
+	td.visible-md.visible-xs {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.visible-md.visible-sm {
+		display: block !important;
+	}
+	table.visible-md.visible-sm {
+		display: table;
+	}
+	tr.visible-md.visible-sm {
+		display: table-row !important;
+	}
+	th.visible-md.visible-sm,
+	td.visible-md.visible-sm {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.visible-md {
+		display: block !important;
+	}
+	table.visible-md {
+		display: table;
+	}
+	tr.visible-md {
+		display: table-row !important;
+	}
+	th.visible-md,
+	td.visible-md {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 1200px) {
+	.visible-md.visible-lg {
+		display: block !important;
+	}
+	table.visible-md.visible-lg {
+		display: table;
+	}
+	tr.visible-md.visible-lg {
+		display: table-row !important;
+	}
+	th.visible-md.visible-lg,
+	td.visible-md.visible-lg {
+		display: table-cell !important;
+	}
+}
+.visible-lg,
+tr.visible-lg,
+th.visible-lg,
+td.visible-lg {
+	display: none !important;
+}
+@media (max-width: 767px) {
+	.visible-lg.visible-xs {
+		display: block !important;
+	}
+	table.visible-lg.visible-xs {
+		display: table;
+	}
+	tr.visible-lg.visible-xs {
+		display: table-row !important;
+	}
+	th.visible-lg.visible-xs,
+	td.visible-lg.visible-xs {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.visible-lg.visible-sm {
+		display: block !important;
+	}
+	table.visible-lg.visible-sm {
+		display: table;
+	}
+	tr.visible-lg.visible-sm {
+		display: table-row !important;
+	}
+	th.visible-lg.visible-sm,
+	td.visible-lg.visible-sm {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.visible-lg.visible-md {
+		display: block !important;
+	}
+	table.visible-lg.visible-md {
+		display: table;
+	}
+	tr.visible-lg.visible-md {
+		display: table-row !important;
+	}
+	th.visible-lg.visible-md,
+	td.visible-lg.visible-md {
+		display: table-cell !important;
+	}
+}
+@media (min-width: 1200px) {
+	.visible-lg {
+		display: block !important;
+	}
+	table.visible-lg {
+		display: table;
+	}
+	tr.visible-lg {
+		display: table-row !important;
+	}
+	th.visible-lg,
+	td.visible-lg {
+		display: table-cell !important;
+	}
+}
+.hidden-xs {
+	display: block !important;
+}
+table.hidden-xs {
+	display: table;
+}
+tr.hidden-xs {
+	display: table-row !important;
+}
+th.hidden-xs,
+td.hidden-xs {
+	display: table-cell !important;
+}
+@media (max-width: 767px) {
+	.hidden-xs,
+	tr.hidden-xs,
+	th.hidden-xs,
+	td.hidden-xs {
+		display: none !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.hidden-xs.hidden-sm,
+	tr.hidden-xs.hidden-sm,
+	th.hidden-xs.hidden-sm,
+	td.hidden-xs.hidden-sm {
+		display: none !important;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.hidden-xs.hidden-md,
+	tr.hidden-xs.hidden-md,
+	th.hidden-xs.hidden-md,
+	td.hidden-xs.hidden-md {
+		display: none !important;
+	}
+}
+@media (min-width: 1200px) {
+	.hidden-xs.hidden-lg,
+	tr.hidden-xs.hidden-lg,
+	th.hidden-xs.hidden-lg,
+	td.hidden-xs.hidden-lg {
+		display: none !important;
+	}
+}
+.hidden-sm {
+	display: block !important;
+}
+table.hidden-sm {
+	display: table;
+}
+tr.hidden-sm {
+	display: table-row !important;
+}
+th.hidden-sm,
+td.hidden-sm {
+	display: table-cell !important;
+}
+@media (max-width: 767px) {
+	.hidden-sm.hidden-xs,
+	tr.hidden-sm.hidden-xs,
+	th.hidden-sm.hidden-xs,
+	td.hidden-sm.hidden-xs {
+		display: none !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.hidden-sm,
+	tr.hidden-sm,
+	th.hidden-sm,
+	td.hidden-sm {
+		display: none !important;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.hidden-sm.hidden-md,
+	tr.hidden-sm.hidden-md,
+	th.hidden-sm.hidden-md,
+	td.hidden-sm.hidden-md {
+		display: none !important;
+	}
+}
+@media (min-width: 1200px) {
+	.hidden-sm.hidden-lg,
+	tr.hidden-sm.hidden-lg,
+	th.hidden-sm.hidden-lg,
+	td.hidden-sm.hidden-lg {
+		display: none !important;
+	}
+}
+.hidden-md {
+	display: block !important;
+}
+table.hidden-md {
+	display: table;
+}
+tr.hidden-md {
+	display: table-row !important;
+}
+th.hidden-md,
+td.hidden-md {
+	display: table-cell !important;
+}
+@media (max-width: 767px) {
+	.hidden-md.hidden-xs,
+	tr.hidden-md.hidden-xs,
+	th.hidden-md.hidden-xs,
+	td.hidden-md.hidden-xs {
+		display: none !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.hidden-md.hidden-sm,
+	tr.hidden-md.hidden-sm,
+	th.hidden-md.hidden-sm,
+	td.hidden-md.hidden-sm {
+		display: none !important;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.hidden-md,
+	tr.hidden-md,
+	th.hidden-md,
+	td.hidden-md {
+		display: none !important;
+	}
+}
+@media (min-width: 1200px) {
+	.hidden-md.hidden-lg,
+	tr.hidden-md.hidden-lg,
+	th.hidden-md.hidden-lg,
+	td.hidden-md.hidden-lg {
+		display: none !important;
+	}
+}
+.hidden-lg {
+	display: block !important;
+}
+table.hidden-lg {
+	display: table;
+}
+tr.hidden-lg {
+	display: table-row !important;
+}
+th.hidden-lg,
+td.hidden-lg {
+	display: table-cell !important;
+}
+@media (max-width: 767px) {
+	.hidden-lg.hidden-xs,
+	tr.hidden-lg.hidden-xs,
+	th.hidden-lg.hidden-xs,
+	td.hidden-lg.hidden-xs {
+		display: none !important;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.hidden-lg.hidden-sm,
+	tr.hidden-lg.hidden-sm,
+	th.hidden-lg.hidden-sm,
+	td.hidden-lg.hidden-sm {
+		display: none !important;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.hidden-lg.hidden-md,
+	tr.hidden-lg.hidden-md,
+	th.hidden-lg.hidden-md,
+	td.hidden-lg.hidden-md {
+		display: none !important;
+	}
+}
+@media (min-width: 1200px) {
+	.hidden-lg,
+	tr.hidden-lg,
+	th.hidden-lg,
+	td.hidden-lg {
+		display: none !important;
+	}
+}
+.visible-print,
+tr.visible-print,
+th.visible-print,
+td.visible-print {
+	display: none !important;
+}
+@media print {
+	.visible-print {
+		display: block !important;
+	}
+	table.visible-print {
+		display: table;
+	}
+	tr.visible-print {
+		display: table-row !important;
+	}
+	th.visible-print,
+	td.visible-print {
+		display: table-cell !important;
+	}
+	.hidden-print,
+	tr.hidden-print,
+	th.hidden-print,
+	td.hidden-print {
+		display: none !important;
+	}
+}
+
+.visible-xs-block {
+	display: block;
+}
+@media screen and (min-width: 768px) {
+	.visible-xs-block {
+		display: none !important;
+	}
+}
+
+br.xs{
+	display: none;
+}
+
+.pt-rouble {
+	font-family: 'PT Rouble' !important;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}

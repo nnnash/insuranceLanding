@@ -1,0 +1,918 @@
+.product_bg_img-kasko{
+	display: none !important;
+}
+
+#header-new{
+	display: none;
+}
+
+.hidden-lg, .hidden-md{
+	display: none;
+}
+
+.form-field__input .checkbox .wtf, .form-field__input .wtf-win{
+	display: none;
+}
+
+.dashed-grey-link {
+	text-decoration: none!important;
+	border-bottom: 1px dashed!important;
+	color: #5d5d5d!important;
+}
+.dashed-blue-link {
+	text-decoration: none!important;
+	border-bottom: 1px dashed!important;
+	color: #17a3d8!important;
+}
+.underlined-grey-link {
+	text-decoration: underline!important;
+	color: #5d5d5d!important;
+}
+.underlined-blue-link {
+	text-decoration: underline!important;
+	color: #17a3d8!important;
+}
+
+.dashed-grey-link:hover, .underlined-grey-link:hover,
+.dashed-blue-link:hover, .underlined-blue-link:hover {
+	color: #00d5ff!important;
+}
+
+.dashed-grey-link:visited, .underlined-grey-link:visited,
+.dashed-blue-link:visited, .underlined-blue-link:visited {
+	color: #8324b2!important;
+}
+
+/* TYP stubs */
+.thanks{
+	width: 97%;
+	margin: 100px auto 60px;
+	max-width: 1170px;
+
+	font-size: 0.875rem;
+}
+
+.thanks .sub-block{
+	min-height: 300px;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	padding: 50px 20px 60px 20px;
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.thanks .title{
+	/*color: #8fce48;*/
+	font-size: 40px;
+	font-weight: 200;
+}
+.thanks .title:hover,
+.thanks .title.active{
+	/*color: #8fce48;*/
+}
+
+.thanks .info-block{
+	border-radius: 10px;
+	border: 1px solid #eff8e3;
+	background: #ffffff;
+	min-height: 80px;
+	width: 500px;
+	margin: 30px auto;
+	padding: 20px 30px;
+}
+
+.thanks .info-block table{
+	margin:auto;
+}
+
+.thanks .info-block .odd{
+	text-align: right;
+	padding-right: 5px;
+	width: 42%;
+	vertical-align: top;
+}
+.thanks .info-block .even{
+	text-align: left;
+	padding-left: 5px;
+	font-weight: 600;
+}
+
+.content{
+	margin-top: 80px;
+}
+
+/* Old styles for auth modals - just to make it work for now. Rewrite ASAP*/
+#mask {
+	/*position:absolute;*/
+	position: fixed;
+	left:0;
+	top:0;
+	z-index:9000;
+	background-color:#000;
+	height: 100%;
+	width: 100%;
+	opacity: 0.4;
+	display:none;
+	/*font-family: Georgia;*/
+}
+
+
+#enter{
+	display: none;
+	position: fixed;
+	top: 101px;
+	left: 500px;
+	z-index:9500;
+	/*width: 748px;
+	height: 483px;*/
+	color: #5d5d5d;
+	/*background: url(/Assets/img/modal/bg-enter.png) no-repeat;
+	background: url(/Assets/img/modal/bg-reg.png) no-repeat;*/
+}
+
+#enter #main-block{
+	width: 748px;
+	height: 483px;
+	/*background: url(/Assets/img/modal/bg-enter.png) no-repeat;*/
+	/*background: url(/Assets/img/modal/bg-reg.png) no-repeat;*/
+}
+
+#enter #reg-complate{
+	width: 530px;
+	height: 214px;
+	border-radius: 10px;
+	background: #fff;
+	padding: 30px;
+	/*padding-left: 30px;*/
+}
+
+#enter #reg-complate p{
+	margin-top: 19px;
+}
+
+#enter #reg-complate p.topic{
+	margin-top: 0px;
+}
+
+#enter a#close{
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url(/Assets/img/modal/close.png) 0% 0%;
+	margin-left: 327px;
+	margin-top: -42px;
+}
+#enter a#close:hover{
+	background: url(/Assets/img/modal/close.png) 0% 100%;
+}
+
+#enter #visit{
+	margin-left: 0px;
+	width: 370px;
+	height: 444px;
+	position: absolute;
+	background: #fff;
+	z-index: 1300;
+	border-radius: 7px 7px 2px 7px;
+	padding-left: 30px;
+	padding-top: 12px;
+}
+
+#enter #regist{
+	width: 417px;
+	height: 451px;
+	background: #f0f0f0;
+	position: absolute;
+	margin-left: 329px;
+	margin-top: 32px;
+	z-index: 1000;
+	border-radius: 0px 7px 7px 7px;
+	padding-left: 30px;
+	padding-top: 12px;
+	padding-right: 30px;
+}
+
+#enter #fold{
+	position: absolute;
+	height: 483px;
+	width: 44px;
+	background: url(/Assets/img/modal/fold.png) no-repeat left bottom;
+	margin-left: 327px;
+	z-index: 1200;
+	/*background: #ddd;*/
+}
+
+#enter #regist #regist-content{
+	float: right;
+	width: 320px;
+}
+#enter #visit .for-animation{
+	width: 310px;
+}
+
+#enter #visit #forget{
+	width: 310px;
+	overflow: hidden;
+}
+
+#enter #visit #not-forget{
+	width: 310px;
+	overflow: hidden;
+}
+#enter input[type="email"],
+#enter input[type="password"],
+#enter input[type="text"] {
+	border-radius: 2px;
+	width:100%;
+	border: 1px solid #C9C9C9;
+}
+
+
+p.topic{
+	margin-top: 11px;
+	color: #17a3d8;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-weight: 600;
+	font-size: 24px;
+	margin-bottom: 0px;
+}
+
+p.subtopic{
+	font-size: 16px;
+	color: #5d5d5d;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	margin-top: 18px;
+	margin-bottom:23px;
+}
+
+/*СТИЛИ ДЛЯ ИМПУТОВ*/
+
+/*input[type=text],input[type=number],input[type=email],input[type=password],textarea{*/
+	/*!*width: 310px;*!*/
+	/*width: 100%;*/
+	/*height: 34px;*/
+	/*padding-left: 11px;*/
+	/*border-radius: 5px !important;*/
+	/*font-size: 16px;*/
+	/*border: 1px solid #d6d6d6;*/
+	/*color: #5d5d5d;*/
+	/*margin-bottom: 13px;*/
+/*}*/
+
+/*.select-container .jq-selectbox{*/
+	/*width: 100%;*/
+	/*margin-bottom: 13px;*/
+/*}*/
+
+/*.select-container .jq-selectbox__select{*/
+	/*width: 100%;*/
+/*}*/
+
+.checkbox-container .checkbox{
+	margin-top: 0;
+	margin-bottom: 13px;
+}
+
+p.input-name{
+	margin-top: 12px;
+	margin-bottom: 5px;
+	color: #5d5d5d;
+}
+
+
+span.hint{
+	color: #cccccc;
+	margin-left: 4px;
+	font-size: 13px;
+}
+
+/*input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,textarea:focus{*/
+	/*border: 1px solid #00d5ff;*/
+/*}*/
+input.has-error{
+	border: 1px solid red;
+}
+
+/*кнопочки-переключалочки между "забыли пароль" и "вход"*/
+
+a#regist, a#go-visit, a#forget-pass{
+	color: #17a3d8;
+	border-bottom: 1px dashed #17a3d8;
+	text-decoration: none;
+}
+a#forget-pass:hover, a#go-visit:hover, a#regist:hover{
+	color: #00d5ff;
+	border-bottom: 1px dashed #00d5ff;
+}
+
+a#forget-pass{
+	font-style: italic;
+	display: block;
+	float: right;
+	font-size: 13px;
+	margin-right: 12px;
+	margin-top: 6px;
+}
+
+/*CПЕЦИАЛЬНО ДЛЯ ЧЕКБОКСА*/
+.checkbox,
+.auth-checkbox {
+	position:relative;
+	padding-left:25px;
+	margin-left: 0px;
+	margin-top: 16px;
+}
+
+.check-checkboxes .checkbox,
+.check-checkboxes .auth-checkbox {
+	padding-left:28px;
+}
+
+.checkbox label,
+.auth-checkbox label{
+	line-height: 1.5em;
+}
+
+.checkbox input[type=checkbox],
+.auth-checkbox input[type=checkbox] {
+	position: fixed;
+	left: -5000px;
+}
+
+.checkbox label:after,
+.auth-checkbox label:after {
+	content:'';
+	display:block;
+	height:20px;
+	width:20px;
+	background-image: url(/Assets/img/checkbox.png);
+	background-size: 250%;
+	background-position: 0 0;
+	position:absolute;
+	top:0;
+	left:0;
+	box-sizing: border-box;
+}
+
+.checkbox input[type=checkbox]:checked + label:after,
+.auth-checkbox input[type=checkbox]:checked + label:after {
+	background-position: 100% 0;
+}
+
+.checkbox input[type=checkbox]:focus + label:after,
+.auth-checkbox input[type=checkbox]:focus + label:after,
+.checkbox input[type=checkbox]:hover + label:after,
+.auth-checkbox input[type=checkbox]:hover + label:after
+{
+	border: 1px solid #00d5ff;
+	border-radius: 2px;
+}
+
+.checkbox label span,
+.auth-checkbox label span{
+	font-size: 14px;
+}
+
+.checkbox label span.warning,
+.auth-checkbox label span.warning{
+	min-height: 60px;
+	text-indent: 0px;
+	display: block;
+	color: #5d5d5d;
+	font-size: 13px;
+	margin-top: 11px;
+	line-height: 15px;
+}
+span.warning a{
+	border-bottom: 1px dashed #5d5d5d;
+	padding-bottom: -2px;
+	text-decoration: none;
+	color: #5d5d5d !important;
+}
+
+span.warning a:hover{
+	color: #00d5ff !important;
+	border-bottom: 1px dashed #00d5ff;
+}
+
+
+/*Разделитель перед социальными сетями*/
+.sepor{
+	position: relative;
+	margin-top: 15px;
+	padding: 0 131px;
+	text-align: center;
+	color: #b2b2b2;
+}
+
+.sepor:before, .sepor:after{
+	content: '';
+	position: absolute;
+	top: 10px;
+	border-bottom: 1px solid #d6d6d6;
+	width: 131px;
+}
+
+.sepor:before{
+	left: 0;
+}
+
+.sepor:after{
+	right: 0;
+}
+
+/*.sepor span.line{*/
+/*display: block;*/
+/*float: left;*/
+/*width: 131px;*/
+/*height: 1px;*/
+/*background: #d6d6d6;*/
+/*margin-top: 0px;*/
+/*}*/
+
+/*.sepor span.line:last-child{*/
+/*float: right;*/
+/*}*/
+
+/*.sepor span{*/
+/*display: block;*/
+/*float: left;*/
+/*width: 48px;*/
+/*text-align: center;*/
+/*margin-top: -10px;*/
+/*height: 14px;*/
+/*color: #b2b2b2;*/
+/*}*/
+
+/*стили для кнопок*/
+a.button-enter{
+	border: 1px solid #8fce48;
+	background: #8fce48;
+	padding: 8px 38px;
+	width: 130px;
+	/*height: 130px;*/
+	display: block;
+	border-radius: 5px !important;
+	color: #fff  !important;
+	text-align: center;
+	margin-top: 16px;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+a.button-enter:hover, a.button-enter:focus
+{
+	border: 1px solid #a0e550;
+	background: #a0e550;
+	color: #fff  !important;
+}
+
+a.button-enter.no-active, a.button-enter.no-active:hover{
+	border: 1px solid #c9c9c9;
+	color: #b2b2b2  !important;
+	background: none;
+}
+
+/*
+{
+    border: 1px solid #c9c9c9;
+    color: #b2b2b2;
+    background: none;
+}
+*/
+
+#enter #regist a.button-enter{
+	padding: 8px 31px;
+	width: 220px;
+}
+
+#enter #forget a.button-enter{
+	padding: 8px 0px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	width: 128px;
+}
+
+.social-container{
+	text-align: center;
+}
+
+.social{
+	/*margin-top: 69px;
+	margin-left: 38px;*/
+	/*margin: 50px 0 0 69px;*/
+	display: inline-block;
+	margin-top: 20px;
+}
+
+.social a{
+	display: block;
+	width:40px;
+	height: 40px;
+	margin-right: 25px;
+	float: left;
+	opacity: 0.65;
+	background: black;
+}
+
+.social a:last-child{
+	margin-right: 0px;
+}
+
+.social a:hover{
+	opacity: 1;
+}
+
+.social a#vk{
+	background: url(/Assets/img/modal/social.png) 0% 0%;
+}
+
+.social a#face{
+	background: url(/Assets/img/modal/social.png) 25% 0%;
+}
+
+.social a#mail{
+	background: url(/Assets/img/modal/social.png) 50% 0%;
+}
+
+.social a#lin{
+	background: url(/Assets/img/modal/social.png) 75% 0%;
+}
+
+/*Стили для ошибок большого модального окна*/
+#error{
+	display: table;
+	position: absolute;
+	height: 40px;
+	/*background: black;*/
+	z-index: 100500;
+	white-space: nowrap;
+}
+
+#error .error-arr{
+	display: table-cell;
+	height: 40px;
+	width: 10px;
+	padding: 5px;
+}
+
+
+#error .error-text{
+	display: table-cell;
+	color: #fff;
+	font-size: 14px;
+	vertical-align: middle;
+	padding: 0px 10px;
+	background: #e62e2e;
+	border-radius: 3px;
+
+}
+
+#visit #error{
+	margin-left: 314px;
+	/*display: none;*/
+}
+
+#visit #error .error-arr,
+#visit-multicompany #error .error-arr{
+	background: url(/Assets/img/modal/error.png) 50% 50% no-repeat;
+}
+
+#regist #error{
+
+	display: none;
+	right: 358px;
+}
+
+#regist #error .error-arr{
+	background: url(/Assets/img/modal/error2.png) 50% 50% no-repeat;
+}
+
+
+input.error{
+	border: 1px solid #e62e2e;
+	background: #FFF2F2;
+}
+
+input.error:focus{
+	border: 1px solid #e62e2e;
+}
+
+p.error{
+	color: #e62e2e;
+}
+
+
+/*Стили мобильных страниц*/
+
+#mobile-enter{
+	padding-left: 15px;
+	max-width:768px;
+	min-width: 320px;
+	padding-bottom: 75px;
+	color: #5d5d5d;
+}
+
+#mobile-enter p{
+	margin-bottom: 0px;
+	margin-top: 16px;
+	width:93%;
+}
+
+#mobile-enter p.not-fogget-pass{
+	max-width: 440px;
+}
+
+#mobile-enter.reg-start p.not-fogget-pass{
+	text-align: center;
+}
+
+
+
+#mobile-enter .social{
+	margin: 22px auto auto;
+}
+
+#mobile-enter #forget-pass{
+	font-style: normal;
+	font-size: 14px;
+	margin-top: 24px;
+}
+
+#mobile-enter .spike input{
+	float: left;
+	min-width: 160px;
+	width:63%;
+}
+
+#mobile-enter .spike{
+	height: 40px;
+	clear: both;
+
+}
+
+#mobile-enter .spike2{
+	width: 37%;
+	float: left;
+}
+
+#mobile-enter input{
+	width: 96%;
+	margin-top: 16px;
+	font-size: 14px;
+	font-style: italic;
+	color: #5d5d5d;
+}
+
+input::-webkit-input-placeholder {color:#b2b2b2;}
+input::-moz-placeholder {color:#b2b2b2;}
+
+
+#mobile-enter a.button-enter{
+	margin-bottom: 15px;
+	margin-top: 20px;
+	padding: 8px 0px;
+}
+
+
+#mobile-enter .auth-checkbox{
+	margin-top: 31px;
+	margin-bottom: 0px;
+}
+
+#mobile-enter.reg-start .auth-checkbox{
+	margin-top: 16px;
+	margin-bottom: 0px;
+	width: 97%;
+}
+
+#mobile-enter.reg-start .auth-checkbox label span{
+
+	margin-left: 1px;
+}
+
+
+p.no-akkaunt{
+	font-size: 14px;
+	color: #b2b2b2;
+	margin-bottom: 0px;
+}
+
+
+
+#mobile-enter .sepor{
+	min-width: 288px;
+	margin-top: 24px;
+	margin-left: auto;
+	margin-right: auto;
+	/*width: 96%;*/
+	clear: both;
+}
+
+#mobile-enter .sepor span.line{
+	min-width: 124px;
+	height: 1px;
+	width: 42%;
+}
+
+#mobile-enter .sepor span.line:last-child{
+	float: left;
+}
+
+#mobile-enter .sepor span{
+	margin-left: -2px;
+	width: 43px;
+	height: 20px;
+	text-align: center;
+}
+
+
+
+@media screen and (max-width: 320px) {
+
+	#mobile-enter .spike2 {
+		width: 42%;
+	}
+
+	#mobile-enter .spike input {
+		width: 57%;
+	}
+
+	#mobile-enter .sepor span.line{
+		width: 42%;
+	}
+
+}
+
+@media screen and (min-width: 400px) {
+	#mobile-enter .spike2 {
+		width: 34%;
+	}
+
+	#mobile-enter .spike input {
+		width: 65%;
+	}
+
+}
+
+@media screen and (min-width: 480px) {
+	#mobile-enter .spike2 {
+		width: 28%;
+	}
+
+	#mobile-enter .spike input {
+		width: 71%;
+	}
+
+	#mobile-enter .sepor span.line{
+		width: 44%;
+	}
+
+}
+
+
+@media screen and (min-width: 640px) {
+	#mobile-enter .spike2 {
+		width: 21%;
+	}
+
+	#mobile-enter .spike input {
+		width: 76%;
+	}
+
+	#mobile-enter .sepor span.line{
+		width: 45%;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	#mobile-enter .spike2 {
+		width: 18%;
+	}
+
+	#mobile-enter .spike input {
+		width: 81%;
+	}
+
+	#mobile-enter input{
+		width: 98%;
+	}
+
+	#mobile-enter .sepor{
+		width: 98%;
+	}
+
+	#mobile-enter .sepor span.line{
+		width: 47%;
+	}
+}
+
+/*Классы для вывода ошибок*/
+
+#mobile-enter p.error{
+	color: #f20000;
+	font-size: 13px;
+}
+
+#mobile-enter p.error{
+	margin-top: 0px;
+}
+
+
+/* bootstrap */
+#enter *, #enter *:before, #enter *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#enter {
+	font-size: 14px;
+	line-height: 1.428571429;
+}
+
+#enter .auth-checkbox {
+	display: block;
+	min-height: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	vertical-align: middle;
+}
+
+.checkbox label,
+.auth-checkbox label {
+	display: inline;
+	margin-bottom: 0;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+#created_user_activate .nep-modal-content {
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#created_user_activate .nep-modal-body {
+	padding: 45px 30px 30px 25px;
+	height: 100%;
+}
+
+.reset-code-button{
+	margin-top: 10px;
+}
+
+.reset-code-button a{
+	text-decoration: underline !important;
+}
+
+.reset-code-button a:hover{
+	color: #000000  !important;
+	text-decoration: underline  !important;
+}
+
+.btn-success{
+	color: #ffffff;
+}
+
+.btn-success:disabled{
+	color: graytext;
+	background-color: #ffffff !important;
+	border-color: #d6d6d6 !important;
+}
+
+#exist_user_auth .nep-modal-content {
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#exist_user_auth .nep-modal-body {
+	padding: 45px 30px 30px 25px;
+	height: 100%;
+}
+
+.activate_modal_input{
+	width: 340px;
+	margin: auto;
+}
+
+.auth_modal_input{
+	width: 440px;
+	margin: auto;
+}
+
+.auth_modal_input_small{
+	width: 300px;
+	margin: auto;
+	float: left;
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
+
+#enter .auth-checkbox span {
+	margin-left: 5px;
+}
+/* Rewrite modals ASAP */

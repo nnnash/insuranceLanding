@@ -1,0 +1,691 @@
+@font-face {
+	font-family: 'PT Sans';
+	src: url("../Assets/fonts/PT_Sans-Web-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PT Sans';
+	src: url("../Assets/fonts/PT_Sans-Web-Bold.ttf");
+	font-weight: bold;
+	font-style: normal;
+}
+
+$p-small = 40px;
+$p-middle = 100px;
+$p-big = 144px;
+$speed = .7s
+
+$spring = cubic-bezier(.68,1.52,.66,.85)
+
+$transition-in = transform ($speed / 2) $spring ($speed / 2), opacity ($speed / 2) $spring ($speed / 2)
+$transition-out = transform ($speed / 2) $spring, opacity ($speed / 2) $spring
+
+$car-big-w = 850px
+$car-small-w = 502px
+
+$max-width = 1200px
+
+mwm()
+	@media (min-width 426px) and (min-height 500px)
+		{block}
+
+mwt()
+	@media (min-width 769px) and (min-height 600px)
+		{block}
+
+mwth()
+	@media (min-width 1025px) and (min-height 900px)
+		{block}
+
+orh()
+	@media (orientation: landscape) and (max-height 700px)
+		{block}
+
+orhm()
+	@media (orientation: landscape) and (max-height 400px)
+		{block}
+
+top-line(number)
+	if number == 0
+		top 0
+		height 3.5em
+		+mwm()
+			height: 4.1em
+		+mwt()
+			height 4.3em
+		+mwt()
+			height: 4.6em
+	if number == 1
+		top 4em
+		+mwt()
+			top: 2.9em
+	if number == 2
+		top 7em
+		+mwt()
+			top 6.8em
+
+fz-small()
+	font-size: 14px
+	line-height: 1.4em
+	+mwt()
+		font-size: 16px
+	+mwth()
+		font-size: 18px
+
+fz-medium()
+	font-size: 16px
+	line-height: 1.35em
+	+mwm()
+		font-size: 20px
+	+mwt()
+		font-size: 23px
+	+mwth()
+		font-size: 28px
+
+fz-big()
+	font-size: 20px
+	line-height: 1.2em
+	+mwm()
+		font-size: 26px
+	+mwt()
+		font-size: 36px
+	+mwth()
+		font-size: 40px
+
+fz-large()
+	font-size: 30px
+	line-height: 1.1em
+	+mwm()
+		font-size: 38px
+	+mwt()
+		font-size: 48px
+	+mwth()
+		font-size: 60px
+
+section-p()
+	padding: 0 10%
+
+max-min-width()
+	min-width 320px
+	max-width 500px
+	+mwm()
+		max-width 600px
+	+mwt()
+		max-width 900px
+	+mwth()
+		max-width 1200px
+
+show-active-text()
+	opacity: 0
+	transform translateX(-100%)
+	transition $transition-out
+	../_active &,
+	&\&_active
+		transition $transition-in
+		opacity: 1
+		transform translateX(0)
+
+move-in-on-slide(number)
+	transform translateX(-100%)
+	opacity: 0
+	transition transform $speed $spring, opacity ($speed / 2) linear
+	../_active &
+		transform translateX(0)
+		opacity: 1
+	../_active ~ ../ &
+		transform translateX(100%)
+
+car-position(slidesNumber, number)
+	$step = 100 / (slidesNumber - 1)
+	transform translateX($step * (number - 1) %)
+
+.landing
+	font-family 'PT Sans', sans-serif
+	-webkit-font-smoothing: antialiased;
+	fz-medium()
+	background-color: white
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+
+	&-phone
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		background-color: #4A90E2;
+		transform translateY(0)
+		transition transform $speed, z-index 0s linear $speed
+		z-index: 10
+		.landing-fixed_0 ~ &
+			z-index: -1
+			transform translateY(-100%)
+			transition transform $speed, z-index  0s
+
+		&-form
+			fz-small()
+			width: 100%
+			max-min-width()
+			margin: 0 auto
+
+		&-input
+			section-p()
+			top-line(0)
+			text-align: center
+			padding-top: 1.1em
+			input[type="text"]
+				fz-medium()
+				margin: 0
+				width: 12em
+				background none
+				color #ffffff
+				border none
+				border-bottom 1px solid rgba(white, .5)
+				border-radius 0
+				padding: 0 0 3px
+				&:focus
+					outline none
+
+		&-btn
+			section-p()
+			max-height: 0
+			overflow: hidden
+			transition max-height ($speed / 2), margin ($speed / 2)
+			text-align: center
+			margin-top: 0
+			padding: 0
+			a
+				fz-medium()
+				display: inline-block
+				width: auto;
+				padding: 0.6em 1em;
+			.landing-fixed_final ~ .landing-phone &,
+			&\&_open
+				max-height 4.7em
+				margin: 0.4em 0 1.1em
+
+	&-fixed
+		position: fixed
+		max-min-width()
+		max-height 560px
+		width: 100%
+		height: 100%
+		top: 50%
+		left 50%
+		transform translate(-50%, -50%)
+		z-index: 0
+		+mwm()
+			max-height 640px
+		+mwt()
+			max-height 800px
+		+mwth()
+			max-height 1000px
+
+	&-cover
+		z-index: 100
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background white
+
+	&-car
+		position: absolute
+		top: 60%
+		z-index: -3
+		height: 30%
+		width: 100%
+		transition all $speed $spring
+		~/-fixed_final &
+			opacity: 0
+		@media (max-height 350px)
+			display: none
+		for ind in 0..6
+			.landing-fixed_{ind} &
+				car-position(4, ind)
+		img
+			height: 100%
+			transform translateX(-50%)
+
+		&\&_mobile
+			for ind in 0..6
+				.landing-fixed_{ind} &
+					car-position(5, ind)
+	&-title
+		fz-big()
+		section-p()
+		top-line(1)
+		width: 100%
+		position: absolute
+		z-index: -1
+		show-active-text()
+
+	&-section
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+		&\&_top
+			position: relative
+			background-image url("/insurance/Assets/img/app_sber/landing/dog_105.jpg")
+			background-repeat no-repeat
+			background-size cover
+			background-position 16% center
+			+mwm()
+				background-position 10% center
+			+mwt()
+				background-position left center
+
+		&-video
+			position: absolute
+			right: 0
+			top: 0
+			width: 100%
+			height: 100%
+			z-index: 0
+			overflow hidden
+			video
+				min-width 100%
+				min-height 100%
+				//display: none
+				//+mwt()
+				//	display: block
+			img
+				position: absolute
+				min-width: 100%
+				min-height: 100%
+				width: auto
+				height: auto
+				@media (orientation landscape)
+					display: none
+
+
+		&-gonext
+			//position absolute
+			order 3
+			padding-bottom 30px
+			text-align: center
+			padding-top: 8px
+			//left: 50%
+			//transform: translateX(-50%);
+			//bottom 8%
+			color #ffffff
+			&:hover
+				cursor pointer
+			//+orh()
+			//	display: none
+			span
+				padding-bottom 2px
+				border-bottom 1px dashed
+				position: relative
+				&:before
+					content ''
+					position absolute
+					bottom -2em
+					left 50%
+					margin-left -11px
+					width 23px
+					height 12px
+					background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAMCAYAAACJOyb4AAAABGdBTUEAALGPC/xhBQAAAHtJREFUOBFj+P//fzEQZzBQCQDNEgbiaUBsxAAkuIH4MBDPAGJGSuwA6pcB4jtAXAg3B8ih2AKsBsNsoMQCvAZTYgFRBpNjAUkGk2IBWQYTYwFFBuOzgCoG47BAFmg4ajqGKSSXBhoIywdfgGxEBiHXQHR9UAsi0MXx8QEvTPfCBhqxVgAAAABJRU5ErkJggg==") no-repeat;
+
+		//&\&_active
+		//	z-index: 1
+		//	transition z-index 0s linear $speed
+
+		&-title
+			fz-medium()
+			section-p()
+			position: absolute
+			width: 100%
+			z-index: -1
+			+mwt()
+				padding-right: 35%
+			top-line(2)
+			show-active-text()
+
+			&-collapse
+				display: none
+				+mwt()
+					display: inline
+				&-toggler
+					cursor: pointer
+					color: #4A90E2
+					.landing-section_collapsed &
+						display: block
+				&-collapsible
+					display: none
+					.landing-section_collapsed &
+						display: inline
+				@media (min-height 770px)
+					&-toggler
+						display: none
+					&-collapsible
+						display: inline
+
+		&-picture
+			position: absolute
+			top: 50%
+			left: 0
+			width: 100%
+			height: 40%
+			white-space nowrap
+			background-repeat: no-repeat
+			background-size contain
+			background-position center
+			z-index: -2
+			transform translateX(-100%)
+			opacity: 0
+			transition transform $speed $spring, opacity ($speed / 2) linear
+			.landing-section_active &
+				transform translateX(0)
+				opacity: 1
+			.landing-fixed_0 &,
+			.landing-section_active ~ .landing-section &
+				transform translateX(100%)
+			@media (max-height 365px)
+				display: none
+			@media (max-height 430px) and (max-width 440px)
+				display: none
+			for ind in 1..3
+				&_{ind}
+					background-image: unquote(s('url("/insurance/Assets/img/app_sber/landing/home-shape%s.svg")', ind))
+			&_1
+				background-position 30% center
+			&_2
+				background-position: 60% center
+
+			&-part
+				display: inline-block
+				height: 100%
+				background-repeat no-repeat
+				background-size contain
+				background-position center
+				transition opacity .2s
+				.landing-section_collapsed &
+					opacity: 0
+				&_4-1
+					width: 50%
+					height: 120%
+					background-image: url("/insurance/Assets/img/app_sber/landing/home-shape4.svg")
+					background-position right
+				&_4-2
+					width: 50%
+					background-image: url("/insurance/Assets/img/app_sber/landing/home-shape5.svg")
+					background-position 60px center
+					height: 86%;
+					transform: translateY(-30%) scale(1.1)
+				&_4-3
+					width: 100%
+					transform translateY(-20%)
+					background-image: url("/insurance/Assets/img/app_sber/landing/home-shape6.svg")
+				&_5-1
+					background-size contain
+					background-position right center
+					width: 50%
+					height: 120%
+					background-image: url("/insurance/Assets/img/app_sber/landing/home-shape7.svg")
+					+mwm()
+						background-size contain
+				&_5-2
+					background-size contain
+					background-position 0 center
+					width: 60%
+					height: 95%
+					transform: translate(10%,-15%) scale(1.1)
+					background-image: url("/insurance/Assets/img/app_sber/landing/home-shape5.svg")
+					+mwm()
+						background-size contain
+
+		&-block
+			position: absolute;
+			white-space: normal;
+			display: none
+			+mwt()
+				display: block
+			+orhm()
+				display: none
+			fz-small()
+			&_1-1
+				top: -60px;
+				left: 15%;
+				width: 15%;
+			&_1-2
+				top: -30px
+				left: calc(30% + 230px)
+				width: 265px
+			&_2
+				width: 150px
+				left: 70%
+				top: -100px
+				+mwth()
+					width: 250px
+				span
+					display block
+					font-size 90px
+					color #4A90E2
+					line-height: 1em
+			&_3
+				width: 20%
+				left: 10%
+				top: 20px
+			&_4
+				padding-top: 60px;
+				width: 20%;
+				min-width: 15%;
+				max-width: 250px;
+				left: calc(55% + 170px);
+				top: 40px;
+				background: url(/insurance/Assets/img/app_sber/landing/home-infinity.png) left top no-repeat;
+				transform: translateY(-108%);
+				@media (max-height 660px)
+					display: none
+
+
+
+	&-sections
+		z-index: 1
+		&-final
+			max-min-width()
+			section-p()
+			fz-big()
+			text-align: center
+			margin: 0 auto
+			padding-top: 109px
+			+mwm()
+				padding-top:129px
+			+mwt()
+				padding-top 156px
+			+mwth()
+				padding-top 180px
+
+.check
+	&-phone
+		display flex
+		flex-direction column
+		justify-content space-around
+		height 100%
+		max-height 32em
+		position: relative
+		text-align: center
+		section-p()
+		padding-top: 54px
+		+mwt()
+			text-align: left
+			max-height: 26em
+		.ng-hide
+			display: none !important
+
+		&-input
+			fz-large()
+			background none
+			width 100%
+			color #ffffff
+			border none
+			border-bottom 1px solid #ffffff
+			border-radius 0
+			//margin 5px 0 17px 0
+			margin: 0 auto 20px
+			padding: 0 0 10px
+			display: inline-block
+			flex-shrink 1
+			&:focus
+				outline none
+			&\&_top
+				fz-medium()
+				//padding-bottom: 3px
+				border-bottom-color rgba(white, .5)
+			+mwt()
+				width: 450px
+			+mwth()
+				width: 560px
+
+
+		&-desc
+			order 1
+			fz-medium()
+			color: #FFFFFF;
+			letter-spacing: 0;
+			margin: 0 auto
+			width: 320px - ($p-small * 2)
+			//position: absolute
+			//bottom: 0
+			//left: 50%
+			//margin-left: -(@width / 2)
+			+orhm()
+				width: 80%
+				//margin-left: -40%
+			+mwm()
+				width: 300px
+				//margin-left: -(@width / 2)
+			+mwt()
+				//position: relative
+				text-align left
+				text-shadow: 0 1px 1px rgba(0,0,0,.1);
+				width 340px
+				//left: 0
+				margin-left:0
+			+mwth()
+				width: 400px
+
+		&-div
+			//padding-bottom: 120px
+			order 0
+			margin: 0 auto
+			text-align left
+			color #ffffff
+			text-shadow 0 0.5px 0.5px rgba(0, 0, 0, 0.1)
+			+mwt()
+				order 2
+				margin: 0
+
+			&-form
+				max-width: 20em
+				display: flex
+				flex-direction column
+				margin: 0 auto
+				+mwt()
+					margin: 0
+				@media (orientation landscape) and (max-height 320px) and (min-width 400px)
+					flex-direction row
+					max-width 40em
+					.check-btn
+						margin-left: 20px
+
+			//+orh()
+			//	padding-bottom: 80px
+			//+mwt()
+			//	padding-top 100px
+			//	padding-bottom: 0
+
+			//&-btn
+				//margin-top 10px
+				//+orh()
+				//	margin-top: 0
+				//padding 10px 0
+				//+mwt()
+				//	margin-top: 20px
+				//+mwth()
+				//	margin-top: 30px
+
+			&-after
+				fz-small()
+
+		&-btn
+			fz-big()
+			background-color rgba(#ffffff, .25)
+			-webkit-border-radius 2px
+			-moz-border-radius 2px
+			color rgba(white, .5)
+			text-decoration none
+			border-radius 4px
+			padding .7em 0
+			width: 100%
+			text-align: center
+			display: inline-block
+			white-space nowrap
+			flex-shrink 0
+			+mwm()
+				font-size: 22px
+			+mwt()
+				padding 20px 40px
+				width: auto
+				font-size: 26px
+			&.enable
+				background #ffd300
+				color #000000
+				opacity 1
+				&:hover
+					background #ffd300
+					color #000000
+					opacity: .8
+			&:hover
+				background-color rgba(#ffffff, .25)
+				color: @color
+				text-decoration: none
+			&:focus
+				color rgba(white, .5)
+				text-decoration: none
+
+input[type="text"]
+	&::-webkit-input-placeholder
+		color #ffffff
+	&:-ms-input-placeholder
+		color #ffffff
+	&::-moz-placeholder
+		color #ffffff
+		opacity 1
+	&:-moz-placeholder
+		color #ffffff
+		opacity 1
+	&::-ms-clear
+		display: none
+
+.check-phone-input[type="email"]
+	color #ffffff
+	opacity 1
+	font-size 36px
+	&::-webkit-input-placeholder
+		color #ffffff
+		opacity .7
+		font-size 36px
+	&:-ms-input-placeholder
+		color #ffffff
+		opacity .7
+		font-size 36px
+	&::-moz-placeholder
+		color #ffffff
+		opacity .7
+		font-size 36px
+	&:-moz-placeholder
+		color #ffffff
+		opacity .7
+		font-size 36px
+
+.check-phone-error
+	color red

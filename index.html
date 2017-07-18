@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru" data-ng-app="NEP" id="ng-app">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	
+	<title>Сбербанк: Автострахование</title>
+	<meta name="keywords" content="НЭП"/>
+	<meta name="description" content="Электронная страховка: купите страховой полис online. Мы стремимся сделать online покупку страхового полиса такой же удобной и простой, как и покупка авиабилета"/>
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption" rel="stylesheet">
+	<link rel="stylesheet" href="./Assets/style.css">
+	<!--[if lt IE 9]>
+	<script src="./Assets/Js/plugins/html5shiv.js"></script>
+	<script src="./Assets/Js/plugins/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+<body data-ng-controller="mainControllerSber"
+	  data-ng-init="setAuthenticated('', 0, 0)">
+
+	<div class="landing">
+
+		<div class="landing-sections">
+
+			<section class="section landing-section landing-section_top">
+				<div class="landing-section-video">
+					<video poster="Assets/img/app_sber/landing/dog_105.jpg"
+					       playsinline webkit-playsinline>
+						<!--<source src="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4" type="video/mp4">-->
+						<!--<source src="Assets/video/dog_4.webm" type="video/webm">-->
+						<source src="Assets/video/dog_4.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="logo">Сбербанк Автострахование</div>
+				<div class="check-phone">
+					<div class="check-phone-desc" ng-show="!checkPhoneError">
+						Узнайте стоимость каско и&nbsp;ОСАГО прямо на&nbsp;сайте, без обратных звонков и&nbsp;спама
+					</div>
+					<div class="check-phone-desc ng-hide" ng-show="checkPhoneError">
+						К сожалению, сервис пока недоступен для вас. Но мы можем сообщить вам, когда доступ будет открыт.
+					</div>
+
+					<div class="check-phone-div" >
+						<div ng-show="!checkPhoneError" class="check-phone-div-form">
+							<div class="check-phone-div-input" >
+								<input type="text" nep-phone-input ng-model="userPhone" class="check-phone-input" placeholder="+7 XXX XXX-XX-XX" >
+							</div>
+
+							<div class="check-phone-div-btn" >
+								<a href="" class="check-btn" ng-class="{enable: userPhoneReady}" id="check-phone-btn" ng-click="checkPhone()">Получить приглашение</a>
+								<div class="loading-spinner display-none"></div>
+							</div>
+						</div>
+
+						<!--<div class="check-phone-test">-->
+						<!--Вы сами решаете, кого пускать за руль,  но за неопытного водителя-->
+						<!--страховая может добавить повышающий коэффециент-->
+						<!--</div>-->
+
+						<div ng-show="checkPhoneError" class="ng-hide check-phone-div-form">
+
+							<div class="check-phone-div-input" >
+								<input type="email" class="check-phone-input" placeholder="Электронная почта" >
+							</div>
+							<div class="check-phone-div-after" >
+								Укажите вашу электронную почту. Обещаем не спамить.
+							</div>
+
+							<div class="check-phone-div-btn" >
+								<a href="" class="check-btn enable" id="check-email-btn" data-ng-click="checkPhoneError=0">Отправить</a>
+								<div class="loading-spinner display-none"></div>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="landing-section-gonext"><span>Как это работает</spagit remote add origin https://github.com/nnnash/test.gitn></div>
+				</div>
+
+			</section>
+
+			<section class="section"></section>
+
+			<section class="section"></section>
+
+			<section class="section"></section>
+
+			<section class="section"></section>
+
+			<section class="section section_mobile"></section>
+
+			<section class="section section_final">
+				<div class="landing-sections-final">
+					Укажите номер телефона, чтобы узнать, доступен&nbsp;ли вам сервис. Обещаем не&nbsp;спамить.
+				</div>
+			</section>
+
+		</div>
+
+		<div class="landing-fixed landing-fixed_0">
+
+			<div class="landing-car">
+				<img src="Assets/img/app_sber/landing/home-car.png">
+			</div>
+
+			<h2 class="landing-title landing-title_1">Как оформить страховку</h2>
+
+			<section class="landing-section landing-section_1" id="landing-section-1">
+				<h4 class="landing-section-title"><strong>Расскажите</strong> о&nbsp;вашем автомобиле и&nbsp;водителях</h4>
+				<div class="landing-section-picture landing-section-picture_1">
+					<div class="landing-section-block landing-section-block_1-1">На&nbsp;стоимость влияет состояние автомобиля, наличие семьи и&nbsp;детей</div>
+					<div class="landing-section-block landing-section-block_1-2">Вы&nbsp;сами решаете, кого пускать за&nbsp;руль, но&nbsp;за&nbsp;неопытного водителя страховая может добавить повышающий коэффециент</div>
+				</div>
+			</section>
+
+			<section class="landing-section landing-section_2" id="landing-section-2">
+				<h4 class="landing-section-title">
+					<strong>Выберите</strong> страховую компанию, подходящие условия и&nbsp;стоимость страховки
+				</h4>
+				<div class="landing-section-picture landing-section-picture_2">
+					<div class="landing-section-block landing-section-block_2">
+						<span>5</span> аккредитованных компаний с&nbsp;хорошей репутацией и&nbsp;опытом выплат по&nbsp;страховым случаям
+					</div>
+				</div>
+			</section>
+
+			<section class="landing-section landing-section_3" id="landing-section-3">
+				<h4 class="landing-section-title">
+					<strong>Закажите</strong> доставку полиса или приезжайте в&nbsp;страховую компанию лично
+				</h4>
+				<div class="landing-section-picture landing-section-picture_3">
+					<div class="landing-section-block landing-section-block_3">Полис вступает в&nbsp;силу после осмотра вашего автомобиля. Вы&nbsp;сами выбираете, где будет произведен осмотр&nbsp;&mdash; в&nbsp;офисе компании или в&nbsp;любом другом, удобном вам месте
+					</div>
+				</div>
+			</section>
+
+			<h2 class="landing-title landing-title_2">
+				Катайтесь без забот
+			</h2>
+
+			<section class="landing-section landing-section_4" id="landing-section-4">
+				<h4 class="landing-section-title">
+					После оформления полиса мы&nbsp;предоставим вам <strong>персонального юриста</strong>.<span class="landing-section-title-collapse"> <span class="landing-section-title-collapse-collapsible">При необходимости, он&nbsp;поможет урегулировать конфликт на&nbsp;дороге, пообщается с&nbsp;ГИБДД и&nbsp;страховой, представит вас в&nbsp;суде</span><span class="landing-section-title-collapse-toggler">Показать</span></span>
+				</h4>
+				<div class="landing-section-picture landing-section-picture_4">
+					<div class="landing-section-picture-part landing-section-picture-part_4-1 landing-section_desktop"></div>
+					<div class="landing-section-picture-part landing-section-picture-part_4-2 landing-section_desktop"></div>
+					<div class="landing-section-picture-part landing-section-picture-part_4-3 landing-section_mobile"></div>
+					<!--<p><a href="">Подробнее про юридическую помощь</a></p>-->
+					<div class="landing-section-block landing-section-block_4">Вы сможете звонить юристу  и&nbsp;бесплатно консультироваться неограниченное количество раз  на протяжении всего периода действия страхового полиса
+					</div>
+				</div>
+
+			</section>
+
+			<section class="landing-section landing-section_mobile landing-section_5" id="landing-section-5">
+				<h4 class="landing-section-title">
+					Он&nbsp;поможет урегулировать конфликт на&nbsp;дороге, пообщается с&nbsp;ГИБДД и&nbsp;страховой, представит вас в&nbsp;суде
+				</h4>
+				<div class="landing-section-picture landing-section-picture_5">
+					<div class="landing-section-picture-part landing-section-picture-part_5-1"></div>
+					<div class="landing-section-picture-part landing-section-picture-part_5-2"></div>
+				</div>
+			</section>
+
+			<section class="landing-section landing-section_6"></section>
+		</div>
+
+		<div class="landing-phone">
+			<div class="landing-phone-form">
+				<div class="landing-phone-input" >
+					<input type="text"
+					       ng-focus="_isPhoneFocused = true"
+					       ng-blur="_isPhoneFocused = false"
+					       placeholder="+7 Мобильный телефон" >
+				</div>
+				<div class="landing-phone-btn"
+				     ng-class="{'landing-phone-btn_open': _isPhoneFocused}">
+					<a href="" class="check-btn">Получить приглашение</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="landing-cover"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="./Assets/cache/22651c0e017f11b4c5a93ce03058faa4.js" ></script>
+
+<script src="js/jquery.fullpage.extensions.min.js"></script>
+<script src="js/device.js"></script>
+<script src="js/script.js"></script>
+
+<link rel="stylesheet" href="js/jquery.fullpage.css">
+
+
+
+</body>
+</html>

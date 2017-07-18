@@ -207,8 +207,8 @@ html {
 }
 @font-face {
   font-family: 'PT Rouble';
-  src: url("/insurance/Assets/fonts/rubsr-webfont.eot");
-  src: url("/insurance/Assets/fonts/rubsr-webfont.eot?#iefix") format('embedded-opentype'), url("/insurance/Assets/fonts/rubsr-webfont.woff") format('woff'), url("/insurance/Assets/fonts/rubsr-webfont.ttf") format('truetype'), url("/insurance/Assets/fonts/rubsr-webfont.svg#PT Rouble") format('svg');
+  src: url("../Assets/fonts/rubsr-webfont.eot");
+  src: url("../Assets/fonts/rubsr-webfont.eot?#iefix") format('embedded-opentype'), url("../Assets/fonts/rubsr-webfont.woff") format('woff'), url("../Assets/fonts/rubsr-webfont.ttf") format('truetype'), url("../Assets/fonts/rubsr-webfont.svg#PT Rouble") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1134,10 +1134,10 @@ br.xs {
   color: #17a3d8 !important;
 }
 .pickmeup .pmu-instance:first-child .pmu-prev {
-  background: url("/insurance/Assets/img/insure/datepick-left.png") center center no-repeat;
+  background: url("../Assets/img/insure/datepick-left.png") center center no-repeat;
 }
 .pickmeup .pmu-instance:last-child .pmu-next {
-  background: url("/insurance/Assets/img/insure/datepick-right.png") center center no-repeat;
+  background: url("../Assets/img/insure/datepick-right.png") center center no-repeat;
 }
 .pickmeup .pmu-instance:first-child .pmu-prev:hover,
 .pickmeup .pmu-instance:last-child .pmu-next:hover {
@@ -1343,7 +1343,7 @@ br.xs {
   display: block;
   height: 20px;
   width: 20px;
-  background-image: url("/insurance/Assets/img/checkbox.png");
+  background-image: url("../Assets/img/checkbox.png");
   background-size: 250%;
   background-position: 0 0;
   position: absolute;
@@ -1503,7 +1503,7 @@ br.xs {
   height: 38px;
   width: 40px;
   position: absolute;
-  background: url("/insurance/Assets/img/loading-combo.gif") no-repeat center center;
+  background: url("../Assets/img/loading-combo.gif") no-repeat center center;
   right: 1%;
   top: 1px;
 }
@@ -1595,7 +1595,7 @@ br.xs {
   bottom: 0;
   width: 34px;
   height: 100%;
-  background: url("/insurance/Assets/img/app_sber/calendar_icon.png") center no-repeat;
+  background: url("../Assets/img/app_sber/calendar_icon.png") center no-repeat;
   background-size: 20px;
   cursor: pointer;
 }
@@ -1621,7 +1621,7 @@ br.xs {
   height: 25px;
   margin-left: 111px;
   margin-top: -43px;
-  background: url("/insurance/Assets/img/insure/calendar.png") no-repeat 50% 50%;
+  background: url("../Assets/img/insure/calendar.png") no-repeat 50% 50%;
 }
 .ngrs-range-slider {
   position: relative;
@@ -2166,11 +2166,11 @@ button.close {
 }
 .alt-auth #USER_AUTH_SUBMIT {
   background-size: 20px !important;
-  background: #8fce48 url("/insurance/Assets/img/modal/icon_enter.png") 110px 9px no-repeat;
+  background: #8fce48 url("../Assets/img/modal/icon_enter.png") 110px 9px no-repeat;
 }
 .alt-auth #USER_AUTH_SUBMIT:hover,
 .alt-auth #USER_AUTH_SUBMIT:focus {
-  background: #a0e550 url("/insurance/Assets/img/modal/icon_enter.png") 110px 9px no-repeat;
+  background: #a0e550 url("../Assets/img/modal/icon_enter.png") 110px 9px no-repeat;
 }
 .alt-auth #CALC_USER_REMIND_EMAIL {
   width: 320px;
@@ -2268,7 +2268,7 @@ body {
   font-family: "PT Sans Caption";
   padding: 0 100px;
   background-color: #f7f7f7;
-  background: url("/insurance/Assets/img/app_sber/home2.png") center top no-repeat;
+  background: url("../Assets/img/app_sber/home2.png") center top no-repeat;
   background-size: 100% auto;
   height: 100%;
   color: #fff;
@@ -2284,7 +2284,7 @@ body {
   width: 80px;
   padding-top: 5px;
   padding-left: 50px;
-  background: url("/insurance/Assets/img/app_sber/logo.png") left top no-repeat;
+  background: url("../Assets/img/app_sber/logo.png") left top no-repeat;
   font-size: 0.875rem;
   line-height: 1.13;
   text-align: left;
@@ -3184,12 +3184,12 @@ body {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: url("/insurance/Assets/img/modal/close.png") 0% 0%;
+  background: url("../Assets/img/modal/close.png") 0% 0%;
   margin-left: 327px;
   margin-top: -42px;
 }
 #enter a#close:hover {
-  background: url("/insurance/Assets/img/modal/close.png") 0% 100%;
+  background: url("../Assets/img/modal/close.png") 0% 100%;
 }
 #enter #visit {
   margin-left: 0px;
@@ -3219,7 +3219,7 @@ body {
   position: absolute;
   height: 483px;
   width: 44px;
-  background: url("/insurance/Assets/img/modal/fold.png") no-repeat left bottom;
+  background: url("../Assets/img/modal/fold.png") no-repeat left bottom;
   margin-left: 327px;
   z-index: 1200;
 }
@@ -3326,7 +3326,7 @@ a#forget-pass {
   display: block;
   height: 20px;
   width: 20px;
-  background-image: url("/insurance/Assets/img/checkbox.png");
+  background-image: url("../Assets/img/checkbox.png");
   background-size: 250%;
   background-position: 0 0;
   position: absolute;
@@ -3448,16 +3448,16 @@ a.button-enter.no-active:hover {
   opacity: 1;
 }
 .social a#vk {
-  background: url("/insurance/Assets/img/modal/social.png") 0% 0%;
+  background: url("../Assets/img/modal/social.png") 0% 0%;
 }
 .social a#face {
-  background: url("/insurance/Assets/img/modal/social.png") 25% 0%;
+  background: url("../Assets/img/modal/social.png") 25% 0%;
 }
 .social a#mail {
-  background: url("/insurance/Assets/img/modal/social.png") 50% 0%;
+  background: url("../Assets/img/modal/social.png") 50% 0%;
 }
 .social a#lin {
-  background: url("/insurance/Assets/img/modal/social.png") 75% 0%;
+  background: url("../Assets/img/modal/social.png") 75% 0%;
 }
 #error {
   display: table;
@@ -3486,14 +3486,14 @@ a.button-enter.no-active:hover {
 }
 #visit #error .error-arr,
 #visit-multicompany #error .error-arr {
-  background: url("/insurance/Assets/img/modal/error.png") 50% 50% no-repeat;
+  background: url("../Assets/img/modal/error.png") 50% 50% no-repeat;
 }
 #regist #error {
   display: none;
   right: 358px;
 }
 #regist #error .error-arr {
-  background: url("/insurance/Assets/img/modal/error2.png") 50% 50% no-repeat;
+  background: url("../Assets/img/modal/error2.png") 50% 50% no-repeat;
 }
 input.error {
   border: 1px solid #e62e2e;

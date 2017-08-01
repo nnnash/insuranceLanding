@@ -81,7 +81,7 @@ fz-medium()
 	+mwt()
 		font-size: 23px
 	+mwth()
-		font-size: 28px
+		font-size: 26px
 
 fz-big()
 	font-size: 20px
@@ -235,9 +235,9 @@ car-position(slidesNumber, number)
 
 	&-car
 		position: absolute
-		top: 60%
+		top: 56%
 		z-index: -3
-		height: 30%
+		height: 34%
 		width: 100%
 		transition all $speed $spring
 		~/-fixed_final &
@@ -263,6 +263,10 @@ car-position(slidesNumber, number)
 		position: absolute
 		z-index: -1
 		show-active-text()
+		@media(min-height 650px) and (min-width 769px)
+			top 23%
+		@media(min-height 440px) and (max-width 768px)
+			top 20%
 
 	&-section
 		position: absolute
@@ -274,6 +278,7 @@ car-position(slidesNumber, number)
 		&\&_top
 			position: relative
 			background-image url("../Assets/img/app_sber/landing/dog_105.jpg")
+			background-color #4a90e2
 			background-repeat no-repeat
 			background-size cover
 			background-position 16% center
@@ -307,19 +312,13 @@ car-position(slidesNumber, number)
 
 
 		&-gonext
-			//position absolute
 			order 3
 			padding-bottom 30px
 			text-align: center
 			padding-top: 8px
-			//left: 50%
-			//transform: translateX(-50%);
-			//bottom 8%
 			color #ffffff
 			&:hover
 				cursor pointer
-			//+orh()
-			//	display: none
 			span
 				padding-bottom 2px
 				border-bottom 1px dashed
@@ -334,9 +333,6 @@ car-position(slidesNumber, number)
 					height 12px
 					background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAMCAYAAACJOyb4AAAABGdBTUEAALGPC/xhBQAAAHtJREFUOBFj+P//fzEQZzBQCQDNEgbiaUBsxAAkuIH4MBDPAGJGSuwA6pcB4jtAXAg3B8ih2AKsBsNsoMQCvAZTYgFRBpNjAUkGk2IBWQYTYwFFBuOzgCoG47BAFmg4ajqGKSSXBhoIywdfgGxEBiHXQHR9UAsi0MXx8QEvTPfCBhqxVgAAAABJRU5ErkJggg==") no-repeat;
 
-		//&\&_active
-		//	z-index: 1
-		//	transition z-index 0s linear $speed
 
 		&-title
 			fz-medium()
@@ -348,6 +344,10 @@ car-position(slidesNumber, number)
 				padding-right: 35%
 			top-line(2)
 			show-active-text()
+			@media(min-height 650px) and (min-width 769px)
+				top: calc(23% + 2.4em)
+			@media(min-height 440px) and (max-width 768px)
+				top: calc(20% + 2.4em)
 
 			&-collapse
 				display: none
@@ -361,11 +361,6 @@ car-position(slidesNumber, number)
 				&-collapsible
 					display: none
 					.landing-section_collapsed &
-						display: inline
-				@media (min-height 770px)
-					&-toggler
-						display: none
-					&-collapsible
 						display: inline
 
 		&-picture
@@ -529,7 +524,6 @@ car-position(slidesNumber, number)
 			border none
 			border-bottom 1px solid #ffffff
 			border-radius 0
-			//margin 5px 0 17px 0
 			margin: 0 auto 20px
 			padding: 0 0 10px
 			display: inline-block
@@ -538,7 +532,6 @@ car-position(slidesNumber, number)
 				outline none
 			&\&_top
 				fz-medium()
-				//padding-bottom: 3px
 				border-bottom-color rgba(white, .5)
 			+mwt()
 				width: 450px
@@ -553,28 +546,19 @@ car-position(slidesNumber, number)
 			letter-spacing: 0;
 			margin: 0 auto
 			width: 320px - ($p-small * 2)
-			//position: absolute
-			//bottom: 0
-			//left: 50%
-			//margin-left: -(@width / 2)
 			+orhm()
 				width: 80%
-				//margin-left: -40%
 			+mwm()
 				width: 300px
-				//margin-left: -(@width / 2)
 			+mwt()
-				//position: relative
 				text-align left
 				text-shadow: 0 1px 1px rgba(0,0,0,.1);
 				width 340px
-				//left: 0
 				margin-left:0
 			+mwth()
 				width: 400px
 
 		&-div
-			//padding-bottom: 120px
 			order 0
 			margin: 0 auto
 			text-align left
@@ -597,60 +581,44 @@ car-position(slidesNumber, number)
 					.check-btn
 						margin-left: 20px
 
-			//+orh()
-			//	padding-bottom: 80px
-			//+mwt()
-			//	padding-top 100px
-			//	padding-bottom: 0
-
-			//&-btn
-				//margin-top 10px
-				//+orh()
-				//	margin-top: 0
-				//padding 10px 0
-				//+mwt()
-				//	margin-top: 20px
-				//+mwth()
-				//	margin-top: 30px
-
 			&-after
 				fz-small()
 
-		&-btn
-			fz-big()
-			background-color rgba(#ffffff, .25)
-			-webkit-border-radius 2px
-			-moz-border-radius 2px
-			color rgba(white, .5)
-			text-decoration none
-			border-radius 4px
-			padding .7em 0
-			width: 100%
-			text-align: center
-			display: inline-block
-			white-space nowrap
-			flex-shrink 0
-			+mwm()
-				font-size: 22px
-			+mwt()
-				padding 20px 40px
-				width: auto
-				font-size: 26px
-			&.enable
+	&-btn
+		fz-big()
+		background-color rgba(#ffffff, .25)
+		-webkit-border-radius 2px
+		-moz-border-radius 2px
+		color rgba(white, .5)
+		text-decoration none
+		border-radius 4px
+		padding .7em 0
+		width: 100%
+		text-align: center
+		display: inline-block
+		white-space nowrap
+		flex-shrink 0
+		+mwm()
+			font-size: 22px
+		+mwt()
+			padding 20px 40px
+			width: auto
+			font-size: 26px
+		&.enable
+			background #ffd300
+			color #000000
+			opacity 1
+			&:hover
 				background #ffd300
 				color #000000
-				opacity 1
-				&:hover
-					background #ffd300
-					color #000000
-					opacity: .8
-			&:hover
-				background-color rgba(#ffffff, .25)
-				color: @color
-				text-decoration: none
-			&:focus
-				color rgba(white, .5)
-				text-decoration: none
+				opacity: .8
+		&:hover
+			background-color rgba(#ffffff, .25)
+			color: @color
+			text-decoration: none
+		&:focus
+			color rgba(white, .5)
+			text-decoration: none
 
 input[type="text"]
 	&::-webkit-input-placeholder

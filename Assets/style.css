@@ -3898,7 +3898,7 @@ p.no-akkaunt {
 }
 @media (min-width: 1025px) and (min-height: 900px) {
   .landing {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 .landing-phone {
@@ -3995,7 +3995,7 @@ p.no-akkaunt {
 }
 @media (min-width: 1025px) and (min-height: 900px) {
   .landing-phone-input input[type="text"] {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 .landing-phone-input input[type="text"]:focus {
@@ -4029,7 +4029,7 @@ p.no-akkaunt {
 }
 @media (min-width: 1025px) and (min-height: 900px) {
   .landing-phone-btn a {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 .landing-fixed_final ~ .landing-phone .landing-phone-btn,
@@ -4090,9 +4090,9 @@ p.no-akkaunt {
 }
 .landing-car {
   position: absolute;
-  top: 60%;
+  top: 56%;
   z-index: -3;
-  height: 30%;
+  height: 34%;
   width: 100%;
   transition: all 0.7s cubic-bezier(0.68, 1.52, 0.66, 0.85);
 }
@@ -4188,6 +4188,16 @@ p.no-akkaunt {
   opacity: 1;
   transform: translateX(0);
 }
+@media (min-height: 650px) and (min-width: 769px) {
+  .landing-title {
+    top: 23%;
+  }
+}
+@media (min-height: 440px) and (max-width: 768px) {
+  .landing-title {
+    top: 20%;
+  }
+}
 .landing-section {
   position: absolute;
   top: 0;
@@ -4198,6 +4208,7 @@ p.no-akkaunt {
 .landing-section.landing-section_top {
   position: relative;
   background-image: url("../Assets/img/app_sber/landing/dog_105.jpg");
+  background-color: #4a90e2;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 16% center;
@@ -4286,7 +4297,7 @@ p.no-akkaunt {
 }
 @media (min-width: 1025px) and (min-height: 900px) {
   .landing-section-title {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 @media (min-width: 769px) and (min-height: 600px) {
@@ -4304,6 +4315,16 @@ p.no-akkaunt {
   transition: transform 0.35s cubic-bezier(0.68, 1.52, 0.66, 0.85) 0.35s, opacity 0.35s cubic-bezier(0.68, 1.52, 0.66, 0.85) 0.35s;
   opacity: 1;
   transform: translateX(0);
+}
+@media (min-height: 650px) and (min-width: 769px) {
+  .landing-section-title {
+    top: calc(23% + 2.4em);
+  }
+}
+@media (min-height: 440px) and (max-width: 768px) {
+  .landing-section-title {
+    top: calc(20% + 2.4em);
+  }
 }
 .landing-section-title-collapse {
   display: none;
@@ -4325,14 +4346,6 @@ p.no-akkaunt {
 }
 .landing-section_collapsed .landing-section-title-collapse-collapsible {
   display: inline;
-}
-@media (min-height: 770px) {
-  .landing-section-title-collapse-toggler {
-    display: none;
-  }
-  .landing-section-title-collapse-collapsible {
-    display: inline;
-  }
 }
 .landing-section-picture {
   position: absolute;
@@ -4636,7 +4649,7 @@ p.no-akkaunt {
 }
 @media (min-width: 1025px) and (min-height: 900px) {
   .check-phone-input.check-phone-input_top {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 @media (min-width: 769px) and (min-height: 600px) {
@@ -4670,7 +4683,7 @@ p.no-akkaunt {
 }
 @media (min-width: 1025px) and (min-height: 900px) {
   .check-phone-desc {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 @media (orientation: landscape) and (max-height: 400px) {
@@ -4729,17 +4742,17 @@ p.no-akkaunt {
     margin-left: 20px;
   }
 }
-.check-phone-after {
+.check-phone-div-after {
   font-size: 14px;
   line-height: 1.4em;
 }
 @media (min-width: 769px) and (min-height: 600px) {
-  .check-phone-after {
+  .check-phone-div-after {
     font-size: 16px;
   }
 }
 @media (min-width: 1025px) and (min-height: 900px) {
-  .check-phone-after {
+  .check-phone-div-after {
     font-size: 18px;
   }
 }
